@@ -1,0 +1,278 @@
+/********************* iboats ui *************************/
+
+#iboats-logo{
+	float: right;	
+	margin: 0 0 25px 50px;
+	max-width: 375px;	
+	min-width: 375px;
+	clear: both;
+}
+
+#inc-500-logo{
+	float: right;	
+	margin: 0 75px 25px 100px;
+	max-width: 200px;	
+	clear: both;
+}
+
+@media only screen and (max-width: 599px){
+	#inc-500-logo,
+	#iboats-logo{
+		display: block;
+		float: none;
+		margin: 15px auto;	
+	}
+}
+
+/********************* catapult *************************/
+
+#catapult-logo{
+	float: right;	
+	margin: 0 0 0 50px;
+	border-radius: 18px;
+	border: solid 1px #555;		
+}
+
+/********************* maverik *************************/
+
+#maverik-girl{
+	float: right;	
+	margin: 0 0 0 50px;
+	border: solid 1px #888;		
+}
+
+#backdrop{
+	background-color: rgba(0,0,0,.9);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	visibility: visible;
+	display: block;
+	width: 100%;
+	opacity: 0;
+}
+
+#player-container{	
+	float: right;
+	border: 5px #333 solid;	
+	margin: 0 auto;	
+	width: 648px;
+	height: 488px;
+	overflow: hidden;
+	display: inline-block;
+	border-radius: 5px;
+	position: fixed;
+	top: calc(50% - 244px);
+	left: calc(50% - 324px); 	
+	z-index: 10001;
+	background: #000;
+	box-shadow: 3px 3px 10px rgba(0,0,0,.7);
+	opacity: 0;
+}
+
+#backdrop::before{
+    content: " ";
+    top: 0;
+    right: 0;
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-image: url('../unitegallery/images/lightbox-icon-close.png');
+    background-position: 0px -35px;
+    z-index: 100002;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px){
+	#backdrop::before{
+	    background-image: url('../unitegallery/images/lightbox-icon-close-black.png');
+	}	
+}
+
+#player-container IFRAME{
+	width: 640px;
+	height: 480px;
+	margin: 0;	
+}
+
+#play-kiosk-demo{	
+	color: #000;
+	text-decoration: none;
+	margin: 0 auto !important;	
+	display: block;	
+	width: 315px;
+	padding: 0;
+	height: 52px;
+	line-height: 52px;
+}
+
+#play-kiosk-demo::before{
+	content: ' ';
+	background: url('../img/video-icon-white.png') no-repeat 0 50%;
+	width: 40px;
+	height: 30px;
+	margin: 0 10px 0 15px;
+	display: inline-block;
+	position: relative;
+	top: 10px;	
+}
+
+/********************* propfinder *************************/
+#prop-montage{
+	float: right;	
+	margin: 15px 0 0 30px;
+	max-width: 375px;	
+	min-width: 375px;
+	clear: both;
+	display: block;
+}
+
+@media only screen and (max-width: 599px){
+	#prop-montage{
+		float: none;
+		margin: 15px auto;	
+	}
+}
+
+/********************* resume modal *************************/
+#resume-container{	
+	border: 5px #333 solid;	
+	margin: 0 auto;	
+	width: 1050px;
+	height: 98%;
+	overflow: hidden;
+	display: inline-block;
+	float: left;
+	border-radius: 5px;
+	position: fixed;
+	top: 1%;
+	left: calc(50% - 525px); 	
+	z-index: 10001;
+	background: #000;
+	box-shadow: 3px 3px 10px rgba(0,0,0,.7);
+	opacity: 0;
+}
+
+@media only screen and (min-width: 1350px){
+	#resume-container{	
+		width: 1250px;
+		left: calc(50% - 625px); 	
+	}	
+}
+
+@media only screen and (max-width: 1024px){
+	#resume-container{	
+		height: 100%;
+		width: 100%;		
+		left: 0;
+		top: 0;
+		border-width: 0;
+		border-radius: 0;		
+	}	
+}
+
+#resume-container IFRAME{
+	width: 100%;
+	height: 100%;
+	margin: 0;	
+}
+
+/********************* wedding *************************/
+#std-container{	
+	border: 5px #333 solid;	
+	margin: 0 auto;	
+	width: 90%;
+	height: 95%;
+	overflow: hidden;
+	display: inline-block;
+	border-radius: 5px;
+	position: fixed;
+	top: 2.5%;
+	left: 5%; 	
+	z-index: 10001;
+	background: url('http://landon-shumway.net/mercedes-solari/images/site/wood3_opt.jpg') repeat 0 0;
+	background-attachment: fixed;
+	box-shadow: 3px 3px 10px rgba(0,0,0,.7);
+	opacity: 0;
+	padding: 75px 200px;
+	
+}
+
+#std-container IFRAME{
+	width: 100%;
+	height: 100%;
+	margin: 0;	
+	border: 2px #000 solid;	
+	box-shadow: 3px 3px 10px rgba(0,0,0,.7);
+	background: #fff;
+}
+
+#wedding #play-std-demo{	
+	color: #fff;
+	text-decoration: none;
+	margin: 0;	
+	display: block;	
+	width: 315px;
+	padding: 0;
+	height: 52px;
+	line-height: 52px;
+	position: absolute;
+	bottom: 37%;
+	left: 40%;
+	left: calc(50% - 95px);
+	z-index: 100;
+}
+
+#wedding #the-cabin-in-the-woods{	
+	max-width: 900px;	
+	bottom: -10%;
+	right: -2%;
+	position: absolute;
+}
+
+#wedding #flowerclump-alt{
+	position: absolute;
+	bottom: -3%;
+	left: 25%;
+	max-width:30%;
+	z-index: 10;
+}
+
+#wedding #flowerclump{
+	position: absolute;
+	bottom: -3%;
+	left: 50%;
+	max-width: 30%;		
+	z-index: 5;	
+}
+
+#wedding #pines{
+	position: absolute;
+	bottom: -8%;
+	left: -14%;
+	max-height: 900px;
+}
+
+#wedding #pine{
+	position: absolute;	
+	bottom: -8%;
+	right: -16%;
+	max-height: 900px;
+}
+
+#wedding .paper{
+	overflow: hidden;	
+	position: relative;
+}
+
+#wedding-gallery{
+	width: 500px;	
+	margin-left: 30%;
+}
+
+#wedding-gallery .ug-thumb-wrapper:last-of-type{
+	margin-left: 125px !important;	
+}
+

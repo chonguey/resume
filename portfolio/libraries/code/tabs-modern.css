@@ -1,0 +1,427 @@
+/* Modern Tab UI */
+/* Landon Shumway */
+/* 2014 - iboats.com */
+
+/* Tab UI Layout */
+.VE_Tabs *{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.VE_Tabs{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: auto;
+	margin: 0;
+	overflow: hidden;
+}
+
+.VE_Tabs .tab-contents-hidden{
+	position: absolute !important;
+	top: -9999em !important;
+	left: -9999em !important;
+}
+
+.VE_Tabs .tab-contents-visible{
+	display: block;
+}
+
+.VE_Tabs .tab-contents-container{
+	clear: both;
+	overflow: hidden;
+}
+
+.VE_Tabs #tabs-mobile{
+		display: none;
+}
+
+.VE_Tabs div{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.VE_Tabs .tab-handles{
+	padding: 0 0 0 1px;
+	clear: both;
+	line-height: normal;
+}
+
+/* Tab Handle Basic Styles */
+
+.VE_Tabs .tab-handles > A,
+.VE_Tabs .tab-handles > A:link,
+.VE_Tabs .tab-handles > A:visited,
+.VE_Tabs .tab-handles > A:active,
+.VE_Tabs .tab-handles > A:hover{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	min-width: 26px;
+	display: block;
+	float: left;
+	position: relative;
+	border-style: solid;
+	border-width: 1px 1px 0 1px;
+	padding: 5px 7px 6px 7px;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	border-color: #787878;
+	background-color:#999;
+	text-shadow: 1px 1px rgba(0,0,0,0.1);
+	font-family: arial, verdana, sans-serif;
+	text-align: center;
+}
+
+.VE_Tabs .tab-handles > A{
+	margin-left: -1px;
+	overflow: hidden;
+}
+
+#content .spaced-handles .tab-handles > A{
+	margin-right: 3px;
+	overflow: hidden;
+}
+
+#content .borderless-handles .tab-handles > A{
+	border-width: 0px !important;
+}
+
+
+#content .indented DIV.tab-handles > A:first-child{
+	margin-left: 10px;
+}
+
+#content .small-indented DIV.tab-handles > A:first-child{
+	margin-left: 5px;
+}
+
+#content .curved-handles DIV.tab-handles > A{
+	border-radius: 8px 8px 0 0;
+}
+
+
+#content .swoop-handles DIV.tab-handles > A{
+	border-radius: 0;
+	border-width: 0px !important;
+	margin: 0 !important;
+	overflow: visible;
+	text-indent: 10px;
+}
+
+#content .swoop-handles DIV.tab-handles > A:first-child{
+	text-indent: 25px;	
+}
+
+#content .swoop-handles DIV.tab-handles > A:after{
+	content: " ";
+	display: block;
+	width: 50px;
+	height: 46px;
+	background: url('/images/tabs/grey_swoop.png') no-repeat 0 0;
+	background-size: cover;
+	float: right;	
+	margin:  0 0 0 15px;	
+}
+
+#content .swoop-handles DIV.tab-handles > A.handle-current:after{	
+	background-image: url('/images/tabs/blue_swoop.png');			
+}
+
+#content .swoop-handles DIV.tab-handles > A.handle-current:before{
+	content: " ";
+	background: url('/images/tabs/blue_swoop_6.png') no-repeat 0 0;			
+	display: block;
+	width: 50px;
+	height: 46px;
+	float: left;
+	position: absolute;
+	left: -50px;
+	z-index: 2;
+}
+
+#content .swoop-handles DIV.tab-handles > A:first-child:before{
+	background-image: url('/images/tabs/blue_swoop_4.png');			
+}
+
+#content .VE_Tabs DIV.tab-handles .tab-button-spacer{
+	background-color: transparent;	
+	border-radius: 0px;
+	border-color: transparent;
+}
+
+#content .curved-handles DIV.tab-handles > A:first-child{
+	border-radius: 9px 8px 0 0;
+}
+
+#content .VE_Tabs.square-handles DIV.tab-handles > A,
+#content .VE_Tabs.square-handles DIV.tab-handles > A:first-child{
+	border-radius: 0;
+}
+
+
+.VE_Tabs.smaller DIV.tab-handles > A{
+	font-size: 10px;
+	padding: 4px 5px 5px 5px;
+}
+
+.VE_Tabs.small DIV.tab-handles > A{
+	font-size: 10px;
+	padding: 5px 7px 6px 7px;
+}
+
+.VE_Tabs.big DIV.tab-handles > A{
+	font-size: 12px;
+	padding: 6px 8px 7px 8px;
+}
+
+.VE_Tabs.bigger DIV.tab-handles > A{
+	font-size: 13px;
+	padding: 9px 10px 10px 10px;
+}
+
+.VE_Tabs.biggest DIV.tab-handles > A{
+	font-size: 15px;
+	padding:10px 15px 11px 15px;
+}
+
+.VE_Tabs.swoop-handles DIV.tab-handles > A{
+	font-size: 20px;
+	height: 46px;
+	line-height: 46px;
+	padding: 0;
+}
+
+/* Tab Contents Styles */
+.VE_Tabs.pad-content .tab-contents-container{
+	padding: 10px;
+}
+
+.VE_Tabs.border-content .tab-contents-container{
+	border: 1px solid #999;
+}
+
+.VE_Tabs.light-border-content .tab-contents-container{
+	border: 1px solid #ccc;
+}
+
+.VE_Tabs.swoop-handles.light-border-content .tab-contents-container{
+	border-width: 0 1px 1px 1px;
+}
+
+.VE_Tabs.rounded-content .tab-contents-container{
+	border-radius: 7px;
+}
+
+#content .VE_Tabs .tab-mobile-contents-container{
+	display:none;
+}
+
+#content .VE_Tabs.swoop-handles .tab-handles{
+	border-radius: 5px 5px 0 0;
+	border: 1px solid #ccc;
+	border-bottom-width: 0;
+	overflow: hidden;
+	position: relative;
+}
+
+
+/* Tab UI Color Styles */
+/* Silver */
+#content .VE_Tabs.silver .tab-handles > A.handle-not-current,
+#content .VE_Tabs.silver-active .tab-handles > A.handle-current,
+#content .VE_Tabs.silver-hover .tab-handles > A.handle-not-current:hover{
+	color: #333;
+	background: #eeeeee;
+	background: -moz-linear-gradient(top,  #eeeeee 0%, #eaeaea 50%, #e4e4e4 51%, #f8f8f8 100%);
+	background: -webkit-linear-gradient(top,  #eeeeee 0%,#eaeaea 50%,#e4e4e4 51%,#f8f8f8 100%);
+	background: linear-gradient(to bottom,  #eeeeee 0%,#eaeaea 50%,#e4e4e4 51%,#f8f8f8 100%);
+}
+
+/* Dark Silver */
+#content .VE_Tabs.dark-silver .tab-handles > A.handle-not-current,
+#content .VE_Tabs.dark-silver-active .tab-handles > A.handle-current,
+#content .VE_Tabs.dark-silver-hover .tab-handles > A.handle-not-current:hover{
+	color: #333;
+	background: #ececec;
+	background: -moz-linear-gradient(top,  #ececec 0%, #e7e7e7 50%, #e0e0e0 51%, #f7f7f7 100%);
+	background: -webkit-linear-gradient(top,  #ececec 0%,#e7e7e7 50%,#e0e0e0 51%,#f7f7f7 100%);
+	background: linear-gradient(to bottom,  #ececec 0%,#e7e7e7 50%,#e0e0e0 51%,#f7f7f7 100%);
+}
+
+/* Red */
+#content .VE_Tabs.red .tab-handles > A.handle-not-current,
+#content .VE_Tabs.red-active .tab-handles > A.handle-current,
+#content .VE_Tabs.red-hover .tab-handles > A.handle-not-current:hover{
+	background: #d5131a;
+	border-color: #a9050a;
+	background: -moz-linear-gradient(top,  #d5131a 0%, #a9050a 100%);
+	background: -webkit-linear-gradient(top,  #d5131a 0%,#a9050a 100%);
+	background: linear-gradient(to bottom,  #d5131a 0%,#a9050a 100%);
+	color: #fff;
+	text-shadow: 1px 1px rgba(0,0,0,0.7);
+}
+
+/* Dark Red */
+#content .VE_Tabs.dark-red .tab-handles > A.handle-not-current,
+#content .VE_Tabs.dark-red-active .tab-handles > A.handle-current,
+#content .VE_Tabs.dark-red-hover .tab-handles > A.handle-not-current:hover{
+	background: #c90130;
+	border-color: #920022;
+	background: -moz-linear-gradient(top,  #c90130 0%, #b2002a 44%, #920022 100%);
+	background: -webkit-linear-gradient(top,  #c90130 0%,#b2002a 44%,#920022 100%);
+	background: linear-gradient(to bottom,  #c90130 0%,#b2002a 44%,#920022 100%);
+	color: #fff;
+	text-shadow: 1px 1px rgba(0,0,0,0.7);
+}
+
+/* Grey Blue */
+#content .VE_Tabs.grey-blue .tab-handles > A.handle-not-current,
+#content .VE_Tabs.grey-blue-active .tab-handles > A.handle-current,
+#content .VE_Tabs.grey-blue-hover .tab-handles > A.handle-not-current:hover{
+	border-color: #036;
+	background: #336699;
+	background: -moz-linear-gradient(top,  #336699 0%, #799bbd 100%);
+	background: -webkit-linear-gradient(top,  #336699 0%,#799bbd 100%);
+	background: linear-gradient(to bottom,  #336699 0%,#799bbd 100%);xt-shadow: 1px 1px rgba(0,0,0,0.4);
+	color: #fff;
+	text-shadow: 1px 1px rgba(0,0,0,0.5);
+}
+
+/* Blue */
+#content .VE_Tabs.blue .tab-handles > A.handle-not-current,
+#content .VE_Tabs.blue-active .tab-handles > A.handle-current,
+#content .VE_Tabs.blue-hover .tab-handles > A.handle-not-current:hover{
+	border-color: #003E79;
+	background: #0152a0;
+	background: -moz-linear-gradient(top,  #0152a0 0%, #0e4082 86%, #0e4082 100%);
+	background: -webkit-linear-gradient(top,  #0152a0 0%,#0e4082 86%,#0e4082 100%);
+	background: linear-gradient(to bottom,  #0152a0 0%,#0e4082 86%,#0e4082 100%);
+	color: #fff;
+	text-shadow: 1px 1px rgba(0,0,0,0.5);
+}
+
+/* Flat Blue */
+#content .VE_Tabs.swoop-handles .tab-handles > A.handle-current{
+	color: #fff;
+	background: url('/images/tabs/blue_swoop_bg.png') repeat-x 0 0;			
+}
+
+/* Dark Blue */
+#content .VE_Tabs.dark-blue .tab-handles > A.handle-not-current,
+#content .VE_Tabs.dark-blue-active .tab-handles > A.handle-current,
+#content .VE_Tabs.dark-blue-hover .tab-handles > A.handle-not-current:hover{
+	border-color: #003E79;
+	background: #0a5092;
+	background: -moz-linear-gradient(top,  #0a5092 0%, #143f76 86%, #143f76 100%);
+	background: -webkit-linear-gradient(top,  #0a5092 0%,#143f76 86%,#143f76 100%);
+	background: linear-gradient(to bottom,  #0a5092 0%,#143f76 86%,#143f76 100%);
+	color: #fff;
+	text-shadow: 1px 1px rgba(0,0,0,0.5);
+}
+
+/* Light Grey */
+#content .VE_Tabs.light-grey .tab-handles > A.handle-not-current,
+#content .VE_Tabs.light-grey-active .tab-handles > A.handle-current,
+#content .VE_Tabs.light-grey-hover .tab-handles > A.handle-not-current:hover{
+	color: #444;
+	background: #e8e8e8;
+	background: -moz-linear-gradient(top,  #e8e8e8 0%, #e2e2e2 50%, #dadada 51%, #f5f5f5 100%);
+	background: -webkit-linear-gradient(top,  #e8e8e8 0%,#e2e2e2 50%,#dadada 51%,#f5f5f5 100%);
+	background: linear-gradient(to bottom,  #e8e8e8 0%,#e2e2e2 50%,#dadada 51%,#f5f5f5 100%);
+	text-shadow: 1px 1px rgba(128,128,128,0.3);
+}
+
+
+/* Grey */
+#content .VE_Tabs.grey .tab-handles > A.handle-not-current,
+#content .VE_Tabs.grey-active .tab-handles > A.handle-current,
+#content .VE_Tabs.grey-hover .tab-handles > A.handle-not-current:hover{
+	color: #fff;
+	background: #c0c0c0;
+	background: -moz-linear-gradient(top,  #c0c0c0 0%, #bababa 50%, #b2b2b2 51%, #d8d8d8 100%);
+	background: -webkit-linear-gradient(top,  #c0c0c0 0%,#bababa 50%,#b2b2b2 51%,#d8d8d8 100%);
+	background: linear-gradient(to bottom,  #c0c0c0 0%,#bababa 50%,#b2b2b2 51%,#d8d8d8 100%);
+}
+
+/* Flat Grey */
+#content .VE_Tabs.swoop-handles .tab-handles,
+#content .VE_Tabs.swoop-handles .tab-handles > A.handle-not-current,
+#content .VE_Tabs.swoop-handles .tab-handles > A.handle-not-current:hover{
+	color: #000;
+	background: url('/images/tabs/grey_swoop_bg.png') repeat-x 0 0;			
+}
+
+
+/* Medium Grey */
+#content .VE_Tabs.medium-grey .tab-handles > A.handle-not-current,
+#content .VE_Tabs.medium-grey-active .tab-handles > A.handle-current,
+#content .VE_Tabs.medium-grey-hover .tab-handles > A.handle-not-current:hover{
+	background: #dbdbdb;
+	background: -moz-linear-gradient(top,  #dbdbdb 0%, #bcbcbc 100%);
+	background: -webkit-linear-gradient(top,  #dbdbdb 0%,#bcbcbc 100%);
+	background: linear-gradient(to bottom,  #dbdbdb 0%,#bcbcbc 100%);
+	color: #fff;
+}
+
+/* Dark Grey */
+#content .VE_Tabs.dark-grey .tab-handles > A.handle-not-current,
+#content .VE_Tabs.dark-grey-active .tab-handles > A.handle-current,
+#content .VE_Tabs.dark-grey-hover .tab-handles > A.handle-not-current:hover{
+	background: #b4b4b4;
+	background: -moz-linear-gradient(top,  #b4b4b4 0%, #9a9a9a 100%);
+	background: -webkit-linear-gradient(top,  #b4b4b4 0%,#9a9a9a 100%);
+	background: linear-gradient(to bottom,  #b4b4b4 0%,#9a9a9a 100%);
+	color: #fff;
+	text-shadow: 1px 1px rgba(0,0,0,0.4);
+}
+
+/* Green */
+#content .VE_Tabs.green .tab-handles > A.handle-not-current,
+#content .VE_Tabs.green-active .tab-handles > A.handle-current,
+#content .VE_Tabs.green-hover .tab-handles > A.handle-not-current:hover{
+	background: #239c02;
+	border-color: #006E2E;
+	background: -moz-linear-gradient(top,  #239c02 0%, #1f8902 100%);
+	background: -webkit-linear-gradient(top,  #239c02 0%,#1f8902 100%);
+	background: linear-gradient(to bottom,  #239c02 0%,#1f8902 100%);
+	text-shadow: 1px 1px rgba(0,0,0,0.4);
+	color: #fff;
+}
+
+/* Yellow */
+#content .VE_Tabs.yellow .tab-handles > A.handle-not-current,
+#content .VE_Tabs.yellow-active .tab-handles > A.handle-current,
+#content .VE_Tabs.yellow-hover .tab-handles > A.handle-not-current:hover{
+	background: #f9e900;
+	background: -moz-linear-gradient(top,  #f9e900 2%, #f1da36 100%);
+	background: -webkit-linear-gradient(top,  #f9e900 2%,#f1da36 100%);
+	background: linear-gradient(to bottom,  #f9e900 2%,#f1da36 100%);
+	color: #000;
+	text-shadow: 1px 1px rgba(255,255,255,0.5);
+}
+
+/* Orange */
+#content .VE_Tabs.orange .tab-handles > A.handle-not-current,
+#content .VE_Tabs.orange-active .tab-handles > A.handle-current,
+#content .VE_Tabs.orange-hover .tab-handles > A.handle-not-current:hover{
+	border-color: #f23000;
+	background: #ff6500;
+	background: -moz-linear-gradient(top,  #ff6500 0%, #ff3300 100%);
+	background: -webkit-linear-gradient(top,  #ff6500 0%,#ff3300 100%);
+	background: linear-gradient(to bottom,  #ff6500 0%,#ff3300 100%);
+	color: #fff;
+	text-shadow: 1px 1px rgba(0,0,0,0.7);
+}
+
+
+/* Aquamarine */
+#content .VE_Tabs.aqua .tab-handles > A.handle-not-current,
+#content .VE_Tabs.aqua-active .tab-handles > A.handle-current,
+#content .VE_Tabs.aqua-hover .tab-handles > A.handle-not-current:hover{
+	background: #3f7693;	
+	background: -moz-linear-gradient(top,  #3f7693 0%, #426682 86%, #426682 100%);
+	background: -webkit-linear-gradient(top,  #3f7693 0%,#426682 86%,#426682 100%);
+	background: linear-gradient(to bottom,  #3f7693 0%,#426682 86%,#426682 100%);
+	color: #fff;
+	text-shadow: 1px 1px rgba(0,0,0,0.7);
+}

@@ -1,0 +1,130 @@
+## Omni autosuggest front-end
+## Processes search queries by segment of iboats and creates snippets of HTML to be displayed as possible search results
+## By: Landon Shumway
+## Created: Aug 2015
+
+use strict;
+use vars qw($VERSION);
+$VERSION = '0.9';
+
+## includes #
+use VE::In;
+use VE::SQL;
+use VE::Data::Dump;
+use VE::Text;
+
+use lib "/virtuals/iboats/packages/unified_autosuggest";
+use unified_autosuggest_library;
+
+use lib "/virtuals/iboats/packages/unified_autosuggest/handler_objects";
+use unified_cover_autosuggest;
+use unified_bimini_autosuggest;
+use unified_prop_autosuggest; 
+use unified_mall_autosuggest;
+use unified_classifieds_autosuggest;
+use unified_forum_autosuggest;
+use unified_oem_autosuggest;
+
+## redirect Logs, etc
+open(STDERR, ">>/virtuals/iboats/packages/finder/logs/unified-autosuggest.log") or warn "Couldn't redirect STDERR: $@";
+
+sub UnifiedAutosuggest(){
+	my %in = In();
+	my $query = TidyWhites($in{q}) || '';
+	my $expandResults = $in{'a'} || '';
+	my $db = Open('iboats');
+	my $headerHTML = "content-type: text/html;charset=ISO-8859-1\ncache-control: no-cache;\n\n";
+
+	$query =~ s/^\s+|\s+$//g; ## trim leading/tailing whitepsace
+
+	unless ($query){
+		print $headerHTML;
+		print  "\n";
+		return 0;
+	}
+
+	my $finalHTML 	= '';
+	my %searchTerms = map {$_ => 1} split(/ |-/, TidyWhites($query));
+	my @specialty 	= ('oem', 'prop' , 'cover', 'bimini');
+	my @loadOrder 	= ('oem', 'prop' , 'cover', 'bimini', 'mall', 	  'ads', 'forums');
+	my @renderOrder = ('oem', 'prop' , 'cover', 'bimini', 'mall', 	  'ads', 'forums');
+	my @groupOrder 	= ('oem', 'props', 'covers','biminis','products', 'ads', 'forums');
+
+	my $segments =
+		($expandResults eq 'pf') ? {'prop'	 => new unified_prop_autosuggest	($db, $query, \%searchTerms, 1) } :
+		($expandResults eq 'cf') ? {'cover'	 => new unified_cover_autosuggest	($db, $query, \%searchTerms, 1) } :
+		($expandResults eq 'bf') ? {'bimini' => new unified_bimini_autosuggest	($db, $query, \%searchTerms, 1) } :
+	    ($expandResults eq 'oem')? {'oem'	 => new unified_oem_autosuggest		($db, $query, \%searchTerms, 1) } :
+		{
+			'cover'		=> new unified_cover_autosuggest		($db, $query, \%searchTerms),
+			'bimini'	=> new unified_bimini_autosuggest		($db, $query, \%searchTerms),
+			'prop'		=> new unified_prop_autosuggest			($db, $query, \%searchTerms),
+			'oem'		=> new unified_oem_autosuggest			($db, $query, \%searchTerms),
+			'mall' 		=> new unified_mall_autosuggest			($db, $query, \%searchTerms),
+			'ads'		=> new unified_classifieds_autosuggest	($db, $query, \%searchTerms),
+			'forums'	=> new unified_forum_autosuggest		($db, $query, \%searchTerms),
+		};
+
+	## Load match data for each segment
+	SEGMENT:foreach my $key (@loadOrder){
+		next SEGMENT unless ($segments->{$key});
+
+		my $flags = $segments->{$key}->{'flags'};
+		next SEGMENT if ($flags && $flags ne '' && !($query =~ /$flags/i));
+
+		my $disqualifiers = $segments->{$key}->{'disqualifiers'};
+		next SEGMENT if ($disqualifiers && $disqualifiers ne '' && $query =~ /$disqualifiers/i);
+
+		$segments->{$key}->LoadData();
+	}
+
+
+	## TO Do :  resort / weight intelligently
+	my $specialResultHits = 0;
+	RESULT_CHECK:foreach my $key (@specialty){
+		next RESULT_CHECK unless ($segments->{$key});
+		if ($segments->{$key}->ResultCount()){
+			$specialResultHits++;
+		}
+	}
+
+
+	## Rebalance results based on specialty result count
+	if ($expandResults ne ''){
+		RESULT_SET:foreach my $key (@specialty){
+			next RESULT_SET unless ($segments->{$key});
+			$segments->{$key}->SetRenderNum( $segments->{$key}->{'max_results'} );
+		}
+	}
+	elsif ($specialResultHits && $expandResults eq ''){
+		RESULT_SET:foreach my $key (@specialty){
+			if ($segments->{$key}->ResultCount()){
+				my $resultsToRender = $segments->{$key}->SetRenderNum( $segments->{$key}->{'default_results'} );
+				$segments->{'mall'}->{'render_num'}+= (0 - $resultsToRender);
+			}
+		}
+	}
+
+
+	## Render Each Segment. Or Not.
+	my $groups = {};
+	SEGMENT:foreach my $key (@renderOrder){
+		next SEGMENT unless ($segments->{$key});
+		$segments->{$key}->MakeHTML();
+		if ($segments->{$key}->{'html'}){
+			$groups->{$segments->{$key}->{'group'}}.= $segments->{$key}->{'html'};
+		}
+	}
+
+
+	## Render Our Groups
+	foreach (@groupOrder){
+		$finalHTML.= unified_autosuggest_library::MakeGroupHTML($_, $groups->{$_});
+	}
+
+	print $headerHTML;
+	print $finalHTML;
+}
+
+UnifiedAutosuggest();
+exit;

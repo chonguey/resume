@@ -1,0 +1,192 @@
+/******************************************************** Maverik ************************************************************/
+#portfolio .maverik-theme h1,
+#portfolio .maverik-theme h2,
+#portfolio .maverik-theme h2 i,
+#portfolio .maverik-theme .portfolio-headline,
+#portfolio .maverik-theme .footer-bar a:link,
+#portfolio .maverik-theme .footer-bar a:visited{ 
+	color: #fff;			
+}
+
+#portfolio .maverik-theme h2 i{
+	background: #333;	
+}
+
+#portfolio-index .effeckt-caption[data-effeckt-transition-page="maverik"] figcaption,
+#portfolio .maverik-theme .theme-button,
+#portfolio .maverik-theme .footer-bar{
+	background-color: #BF1E26;
+	color: #fff;	
+}
+
+#portfolio .maverik-theme section ul li{
+	background-image: url('../img/bullet_black.png');	
+}
+
+/******************************************************** UI Tools ************************************************************/
+#portfolio .melon-theme h1,
+#portfolio .melon-theme h2,
+#portfolio .melon-theme h2 i,
+#portfolio .melon-theme .portfolio-headline,
+#portfolio .melon-theme .footer-bar a:link,
+#portfolio .melon-theme .footer-bar a:visited{
+	color: #fff;	
+}
+
+#portfolio-index .effeckt-caption[data-effeckt-transition-page="ui-tools"] figcaption,
+#portfolio .melon-theme h2 i,
+#portfolio .melon-theme .footer-bar{
+	background-color: #585D68;
+	color: #fff;	
+}
+
+#portfolio .melon-theme section ul li{
+	background-image: url('../img/bullet_lgray.png');	
+}
+
+
+
+/******************************************************** iboats old blue ************************************************************/
+
+#portfolio .iboats-old-blue-theme h1,
+#portfolio .iboats-old-blue-theme h2,
+#portfolio .iboats-old-blue-theme h2 i,
+#portfolio .iboats-old-blue-theme .portfolio-headline,
+#portfolio .iboats-old-blue-theme .footer-bar a:link,
+#portfolio .iboats-old-blue-theme .footer-bar a:visited{
+	color: #fff;	
+}
+
+#portfolio-index .effeckt-caption[data-effeckt-transition-page="propfinder"] figcaption,
+#portfolio .iboats-old-blue-theme h2 i,
+#portfolio .iboats-old-blue-theme .footer-bar{
+	background-color: #036;
+	color: #fff;	
+}
+
+#portfolio .iboats-old-blue-theme ul li{
+	background-image: url('../img/bullet_old_blue.png');	
+}
+
+
+/******************************************************** default ************************************************************/
+
+#portfolio .default-theme h1,
+#portfolio .default-theme h2,
+#portfolio .default-theme h2 i,
+#portfolio .default-theme .portfolio-headline,
+#portfolio .default-theme .footer-bar a:link,
+#portfolio .default-theme .footer-bar a:visited{ 
+	color: #fff;			
+}
+
+#portfolio .default-theme h2 i,
+#portfolio .default-theme .footer-bar{
+	background-color: #000;
+	color: #fff;	
+}
+
+#portfolio .default-theme section ul li{
+	background-image: url('../img/bullet_black.png');	
+}
+
+/******************************************************** resume ************************************************************/
+
+#portfolio .resume-theme h1,
+#portfolio .resume-theme h2,
+#portfolio .resume-theme h2 i,
+#portfolio .resume-theme .portfolio-headline,
+#portfolio .resume-theme .footer-bar a:link,
+#portfolio .resume-theme .footer-bar a:visited{ 
+	color: #fff;			
+}
+
+#portfolio-index .effeckt-caption[data-effeckt-transition-page="resume"] figcaption,
+#portfolio .resume-theme h2 i,
+#portfolio .resume-theme .footer-bar{
+	background-color: #2079c7;
+	color: #fff;	
+}
+
+/******************************************************** iboats blue ************************************************************/
+
+#portfolio .iboats-blue-theme h1,
+#portfolio .iboats-blue-theme h2,
+#portfolio .iboats-blue-theme h2 i,
+#portfolio .iboats-blue-theme .portfolio-headline,
+#portfolio .iboats-blue-theme .footer-bar a:link,
+#portfolio .iboats-blue-theme .footer-bar a:visited{ 
+	color: #fff;			
+}
+
+#portfolio-index .effeckt-caption[data-effeckt-transition-page="iboats-responsive"] figcaption,
+#portfolio-index .effeckt-caption[data-effeckt-transition-page="coverfinder"] figcaption,
+#portfolio .iboats-blue-theme h2 i,
+#portfolio .iboats-blue-theme .footer-bar{
+	background-color: #0152a0;
+	color: #fff;	
+}
+
+#portfolio .iboats-blue-theme section ul li{
+	background-image: url('../img/bullet_dark_blue.png');	
+}
+
+/******************************************************** catapult ************************************************************/
+
+
+#portfolio .catapult-theme h2,
+#portfolio .catapult-theme .portfolio-headline,
+#portfolio .catapult-theme .footer-bar a:link,
+#portfolio .catapult-theme .footer-bar a:visited{ 
+	color: #fff;
+}
+
+#portfolio .catapult-theme h1{
+	color: #F15A29;
+}
+
+#portfolio-index .effeckt-caption[data-effeckt-transition-page="catapult"] figcaption{
+	color: #111;
+	background-color: #F15A29;	
+	text-shadow: 2px 2px 2px rgba(128,128,128,.5);	
+}
+
+
+#portfolio .catapult-theme h2 i{
+	background-color: #111;
+	color: #F15A29;			
+}
+
+#portfolio .catapult-theme .footer-bar{
+	background-color: #111;
+	color: #fff;	
+}
+
+#portfolio .catapult-theme ul li{
+	background-image: url('../img/bullet_orange.png');	
+}
+
+
+/******************************************************** wedding ************************************************************/
+
+
+#portfolio .wedding-theme h1,
+#portfolio .wedding-theme h2,
+#portfolio .wedding-theme h2 i,
+#portfolio .wedding-theme .portfolio-headline,
+#portfolio .wedding-theme .footer-bar a:link,
+#portfolio .wedding-theme .footer-bar a:visited{ 
+	color: #fff;			
+}
+
+#portfolio .wedding-theme .theme-button,
+#portfolio-index .effeckt-caption[data-effeckt-transition-page="wedding"] figcaption,
+#portfolio .wedding-theme h2 i,
+#portfolio .wedding-theme .footer-bar{
+	background-color: #1B7A87;
+	color: #fff;	
+}
+
+#portfolio .wedding-theme .theme-button{
+	text-align: center;
+}
