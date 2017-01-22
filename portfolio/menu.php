@@ -1,5 +1,5 @@
 <!---Menu ----------------------------------------------------------------------------------------------------------------->
-<div class="effeckt-page-active" data-effeckt-page="portfolio-index" data-title="Web UI & Application Programming" data-portfolio-order="0" data-page-theme="default-theme" data-header-bar-color="#486C85">	
+<div class="effeckt-page-active" data-effeckt-page="portfolio-index" data-title="Web Application Development" data-portfolio-order="0" data-page-theme="default-theme" data-header-bar-color="#486C85">	
 	<div id="portfolio-index" class="portfolio-page default-theme">
 		<div class="paper">
 			<section>				

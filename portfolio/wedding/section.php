@@ -32,9 +32,6 @@
 				<img id='pine' src="http://landon-shumway.net/mercedes-solari/save-the-date/images/drawing/pine-8bit.png" />
 			</section>			
 		</div>
-		<div class="footer-bar">
-			<a href="#portfolio-index" class="portfolio-back">Back To Portfolio Menu</a>
-			<div class="notice">&copy; 2015 - Landon Shumway</div>
-		</div>
+		<?php include './footer.php' ?>
 	</div>
 </div>
