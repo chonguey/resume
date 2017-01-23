@@ -109,6 +109,8 @@ body.show-menu [data-effeckt-page] {
 	height: auto;
 }
 
+.download-links::before,
+.download-links::after,
 .paper::before,
 .paper::after{
 	content: " ";
@@ -255,6 +257,18 @@ body.show-menu [data-effeckt-page] {
 	font-family: "Open Sans", Arial, sans-serif;	
 }
 
+#contact-details a:link,
+#contact-details a:visited,
+#contact-details a:active{
+	color: #2079c7;	
+	text-decoration: none;
+}
+
+#contact-details a:hover{
+	color: #111;
+	text-decoration: underline;	
+}
+
 .clear{
 	clear: both;	
 }
@@ -377,4 +391,43 @@ h3 .organization-title{
 
 .organization-duration + h3{
 	margin-top: .75em;
+}
+                                                        
+
+.download-links{
+	margin: 25px auto;	
+	width: 1024px;
+	padding: 0 3%;
+}
+
+.download-links a:link,
+.download-links a:visited,
+.download-links a:active,
+.download-links a:hover{
+	font-family: "Open Sans", Arial, sans-serif;	
+	display: block;
+	width: 33%;	
+	float: left;
+	text-align: left;
+	margin-left: 17%;
+	font-size: 17px;
+	line-height: 35px;
+	padding-left: 40px;
+	color: #000;
+	text-decoration: none;	
+}
+
+.download-links a:hover{
+	color: #111;
+	text-decoration: underline;	
+}
+
+.download-links .doc{
+	background: url('../img/google-doc-logo.png') no-repeat 0 50%;
+	background-size: auto 35px;
+}
+
+.download-links .pdf{
+	background: url('../img/adobe-pdf-logo.png') no-repeat 0 50%;
+	background-size: auto 35px;
 }

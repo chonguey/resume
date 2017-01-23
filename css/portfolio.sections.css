@@ -276,3 +276,13 @@
 	margin-left: 125px !important;	
 }
 
+
+#proofpoint-logo{
+	float: right;	
+	margin: 15px 0 0 30px;
+	max-width: 375px;	
+	min-width: 375px;
+	clear: both;
+	display: block;
+	border: solid 2px #009BC9;	
+}

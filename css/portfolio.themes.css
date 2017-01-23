@@ -190,3 +190,31 @@
 #portfolio .wedding-theme .theme-button{
 	text-align: center;
 }
+
+/******************************************************** proofpoint ************************************************************/
+
+
+#portfolio .proofpoint-theme h1,
+#portfolio .proofpoint-theme h2,
+#portfolio .proofpoint-theme h2 i,
+#portfolio .proofpoint-theme .portfolio-headline,
+#portfolio .proofpoint-theme .footer-bar a:link,
+#portfolio .proofpoint-theme .footer-bar a:visited{ 
+	color: #fff;			
+}
+
+#portfolio .proofpoint-theme .theme-button,
+#portfolio-index .effeckt-caption[data-effeckt-transition-page="proofpoint"] figcaption,
+#portfolio .proofpoint-theme h2 i,
+#portfolio .proofpoint-theme .footer-bar{
+	background-color: #009BC9;
+	color: #fff;	
+}
+
+#portfolio .proofpoint-theme .theme-button{
+	text-align: center;
+}
+
+#portfolio .proofpoint-theme ul li{
+	background-image: url('../img/bullet_pp.png');	
+}

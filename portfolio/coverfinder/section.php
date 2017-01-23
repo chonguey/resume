@@ -1,4 +1,4 @@
-<div data-effeckt-page="coverfinder" data-title="iboats Boat Covers" data-portfolio-order="5" data-page-theme="iboats-blue-theme"" data-header-bar-color="#0152a0">
+<div data-effeckt-page="coverfinder" data-title="iboats Boat Covers" data-portfolio-order="8" data-page-theme="iboats-blue-theme" data-header-bar-color="#0152a0">
 	<div id="coverfinder" class="portfolio-page iboats-blue-theme">
 		<div class="paper">
 			<section>

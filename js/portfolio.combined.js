@@ -296,6 +296,10 @@ var ls_portfolio = {
 			}
 			ls_portfolio.lastPage++;
 		});
+	
+		// Preload nav hover images
+		$('<img/>')[0].src = '../img/arrow-left-big-shadow.png';
+		$('<img/>')[0].src = '../img/arrow-right-big-shadow.png';		
 
 		$('.fullscreen-toggle').on('click', function(){
 			ls_portfolio.toggleFullScreen();

@@ -1,4 +1,4 @@
-<div data-effeckt-page="catapult" data-title="Video Catapult" data-portfolio-order="4" data-page-theme="catapult-theme"" data-header-bar-color="#111111">
+<div data-effeckt-page="catapult" data-title="Video Catapult" data-portfolio-order="5" data-page-theme="catapult-theme"" data-header-bar-color="#111111">
 	<div id="catapult" class="portfolio-page catapult-theme">
 		<div class="paper">
 			<section>

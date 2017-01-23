@@ -26,7 +26,7 @@
 				include './videocatapult/section.php';
 				include './coverfinder/section.php';
 				include './wedding/section.php';
-				include './libraries/section.php';
+				include './proofpoint/section.php';
 				include './ui-tools/section.php';
 			?>
 		</div>
