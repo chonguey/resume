@@ -7,8 +7,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -22,7 +22,7 @@ time, mark, audio, video {
 	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -56,29 +56,29 @@ table {
 html::-webkit-scrollbar {
     width: 4px;
 }
- 
+
 /* Track */
 html::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1); 
-    background: url('../img/debut_dark.png') #333 repeat 0 0;					
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+    background: url('../img/debut_dark.png') #333 repeat 0 0;
 }
- 
+
 /* Handle */
 html::-webkit-scrollbar-thumb {
     -webkit-border-radius: 2px;
     border-radius: 2px;
-    background: rgba(0,0,0,0); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background: rgba(0,0,0,0);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 html::-webkit-scrollbar-thumb:window-inactive {
-	background: rgba(0,0,0,0.1); 
+	background: rgba(0,0,0,0.1);
 }
 
 
 /********************************* */
-body{	
-	font-family: "Merriweather", Georgia, serif;	
-	font-size: 14px;   
+body{
+	font-family: "Merriweather", Georgia, serif;
+	font-size: 14px;
 	line-height: 1.4em;
 	text-align: left;
 	min-height: 1080px;
@@ -91,21 +91,21 @@ body.show-menu [data-effeckt-page] {
 }
 
 .page-transition-animating body{
-	min-height: 10000px;	
+	min-height: 10000px;
 }
 
 .paper{
-	border-radius: 2px;	
+	border-radius: 2px;
 	width: 1024px;
 	min-width: 320px;
 	height: 100%;
 	min-height: 1080px;
-	margin: auto;	
-	padding: 1%;	
+	margin: auto;
+	padding: 1%;
 }
 
 .paper IMG{
-	max-width: 100%;	
+	max-width: 100%;
 	height: auto;
 }
 
@@ -115,69 +115,79 @@ body.show-menu [data-effeckt-page] {
 .paper::after{
 	content: " ";
 	cleaR: both;
-	display: block;	
+	display: block;
 }
 
-@media only screen{	
+@media only screen{
 	body,
 	html{
-		background: url('../img/debut_dark.png') #333 repeat 0 0;					
+		background: url('../img/debut_dark.png') #333 repeat 0 0;
 		background-attachment: fixed;
-	}	
-	
-	
+	}
+
+
 	#resume,
 	#resume body{
-		background: url('../img/brushed.png') #333 repeat 0 0;					
+		background: url('../img/brushed.png') #333 repeat 0 0;
 		background-attachment: fixed;
-	}	
-	
+	}
+
 	.paper{
 		background: #fefefe;
 		border: 1px solid #aaa;
 		box-shadow: 0 0 4px rgba(0,0,0,0.2);
-		margin: 25px auto;	
+		margin: 0 auto 25px auto;
 		padding: 3%;
 	}
-	
+
 	#portfolio .paper{
-		font-family: "Open Sans", Arial, sans-serif;		
-		margin: 135px auto 0 auto;	
-		padding: 1px 3% 25px 3%;		
+		font-family: "Open Sans", Arial, sans-serif;
+		margin: 135px auto 0 auto;
+		padding: 1px 3% 25px 3%;
 		border-width: 0 1px;
-		border-radius: 0;	
-	}	
-	
+		border-radius: 0;
+	}
+
 	#portfolio #portfolio-index .paper{
 		border-width: 0;
-		background: transparent;	
+		background: transparent;
 		box-shadow: none;
-		padding: 30px 1px 0 1px;		
-		min-height: 100px;		
+		padding: 30px 1px 0 1px;
+		min-height: 100px;
 	}
 }
 
 @media only screen and (max-width: 1024px){
-	#resume .paper, 
+	#resume, 
+	#resume body{
+		background: #fff !important;	
+	}
+	
+	.download-links{
+		background: #eee;
+		border-bottom: solid 1px #aaa;	
+	}
+	
+	#resume .paper,
 	#portfolio .paper{
 		margin: 0;
 		border-width: 0;
 		box-shadow: none;
 		width: 100%;
 	}
-	
+
 	#portfolio .paper IMG{
-		max-width: 100% !important;	
+		max-width: 100% !important;
 		min-width: 1px;
-		width: auto;		
+		width: auto;
 	}
-	
+
 	#portfolio #portfolio-index .paper{
-		padding: 5px 0;	
+		padding: 5px 0;
 	}
 }
 
-.theme-button{	
+.theme-button{
 	background-image: url(../img/px_trans.png);
     background-repeat: repeat;
     background-position: 0 0;
@@ -186,7 +196,7 @@ body.show-menu [data-effeckt-page] {
 	padding: 15px;
 	box-shadow: 2px 2px 4px rgba(0,0,0,0.3), inset -1px -1px 2px rgba(0,0,0,.2);
 	color: #000;
-	text-decoration: none;	
+	text-decoration: none;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
 }
 
@@ -196,29 +206,29 @@ body.show-menu [data-effeckt-page] {
 	transition: opacity .25s, transform .25s;
 	height: 90px;
 	width: 90px;
-	display: block;	
+	display: block;
 	opacity: .5;
-	font-family: "Open Sans", Arial, sans-serif;		
+	font-family: "Open Sans", Arial, sans-serif;
 }
 
 @media only screen and (max-width: 1024px){
 	.nav-button{
-		display: none !important;	
-	}	
+		display: none !important;
+	}
 }
 
-.nav-button:hover{	
+.nav-button:hover{
 	transform: scale(1.2,1.2);
 	opacity: 1;
-	transition: opacity .25s, transform .25s;	
+	transition: opacity .25s, transform .25s;
 }
 
-#nav-button-left{	
+#nav-button-left{
 	position: fixed;
 	top: 50%;
 	top: calc(50% - 40px);
-	left: 0;	
-	background: url('../img/arrow-left-big.png') no-repeat 50% 50%;	
+	left: 0;
+	background: url('../img/arrow-left-big.png') no-repeat 50% 50%;
 	background-size: 90px 90px;
 }
 
@@ -226,12 +236,12 @@ body.show-menu [data-effeckt-page] {
 	background-image: url('../img/arrow-left-big-shadow.png')
 }
 
-#nav-button-right{	
+#nav-button-right{
 	position: fixed;
 	top: 50%;
 	top: calc(50% - 40px);
-	right: 0;	
-	background: url('../img/arrow-right-big.png') no-repeat 50% 50%;	
+	right: 0;
+	background: url('../img/arrow-right-big.png') no-repeat 50% 50%;
 	background-size: 90px 90px;
 }
 
@@ -241,9 +251,9 @@ body.show-menu [data-effeckt-page] {
 
 #nav-button-fullscreen{
 	position: fixed;
-	bottom: 0;	
-	right: 0;	
-	background: url('../img/full-screen.png') no-repeat 50% 50%;	
+	bottom: 0;
+	right: 0;
+	background: url('../img/full-screen.png') no-repeat 50% 50%;
 	background-size: 60px 60px;
 	height: 75px;
 	width: 75px;
@@ -254,23 +264,23 @@ body.show-menu [data-effeckt-page] {
 }
 
 #contact-details{
-	font-family: "Open Sans", Arial, sans-serif;	
+	font-family: "Open Sans", Arial, sans-serif;
 }
 
 #contact-details a:link,
 #contact-details a:visited,
 #contact-details a:active{
-	color: #2079c7;	
+	color: #2079c7;
 	text-decoration: none;
 }
 
 #contact-details a:hover{
 	color: #111;
-	text-decoration: underline;	
+	text-decoration: underline;
 }
 
 .clear{
-	clear: both;	
+	clear: both;
 }
 
 .clear-n-margin{
@@ -298,13 +308,13 @@ section + section{
 }
 
 section p{
-	margin:0 0 1em 0;   
+	margin:0 0 1em 0;
 	font-size: 12px;
 	color: #555;
 }
 
 section p.links{
-	text-align: right;	
+	text-align: right;
 }
 
 section p:last-of-type{
@@ -319,18 +329,18 @@ section a:visited{
 }
 
 .gallery{
-	display: none;	
+	display: none;
 	margin-bottom: -10px;
 }
 
 h1{
 	font-size: 5em;
-	line-height: 1em; 
+	line-height: 1em;
 	font-weight: 700;
 	margin-bottom: .1em;
 }
 
-@media only screen and (max-width: 599px){	
+@media only screen and (max-width: 599px){
 	h1{
 		font-size: 3em;
 	}
@@ -346,12 +356,12 @@ h2{
 
 h2 a:link,
 h2 a:visited{
-	text-decoration: none;	
+	text-decoration: none;
 	color: inherit;
 }
 
 h2 a:hover{
-	text-decoration: underline;	
+	text-decoration: underline;
 }
 
 h3{
@@ -362,7 +372,7 @@ h3{
 h3 .organization-name{
 	font-weight: 700;
 	display: inline-block;
-	margin-right: .75em;	
+	margin-right: .75em;
 }
 
 h3 .organization-location{
@@ -392,21 +402,21 @@ h3 .organization-title{
 .organization-duration + h3{
 	margin-top: .75em;
 }
-                                                        
+
 
 .download-links{
-	margin: 25px auto;	
-	width: 1024px;
-	padding: 0 3%;
+	margin: 0 auto;
+	max-width: 1024px;
+	padding: 25px 3%;
 }
 
 .download-links a:link,
 .download-links a:visited,
 .download-links a:active,
 .download-links a:hover{
-	font-family: "Open Sans", Arial, sans-serif;	
+	font-family: "Open Sans", Arial, sans-serif;
 	display: block;
-	width: 33%;	
+	width: 33%;
 	float: left;
 	text-align: left;
 	margin-left: 17%;
@@ -414,12 +424,12 @@ h3 .organization-title{
 	line-height: 35px;
 	padding-left: 40px;
 	color: #000;
-	text-decoration: none;	
+	text-decoration: none;
 }
 
 .download-links a:hover{
 	color: #111;
-	text-decoration: underline;	
+	text-decoration: underline;
 }
 
 .download-links .doc{
@@ -430,4 +440,16 @@ h3 .organization-title{
 .download-links .pdf{
 	background: url('../img/adobe-pdf-logo.png') no-repeat 0 50%;
 	background-size: auto 35px;
+}
+
+@media only screen and (max-width:650px){	
+	.download-links a{
+		width: 90% !important;
+		margin: 0 0 0 10% !important;
+		font-size: 20px !important;
+	}
+	
+	.download-links a:first-of-type{
+		margin-bottom: 15px  !important;;	
+	}
 }

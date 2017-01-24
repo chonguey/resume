@@ -29,14 +29,14 @@ var ls_portfolio = {
 		$("#tabs-gallery").unitegallery(this.gallerySettings);
 		$("#wedding-gallery").unitegallery({
 			grid_num_rows:2,
-			tile_width: 200,	
+			tile_width: 200,
 			tile_height: 130,
 			grid_space_between_cols: 50,
 			grid_space_between_rows: 50
 		});
 		return true;
 	},
-	
+
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	initWeddingModal : function(){
 		$('#wedding #play-std-demo').on('click', function(e){
@@ -51,18 +51,22 @@ var ls_portfolio = {
 						$('#backdrop, #std-container').animate({'opacity': 0}, 250, function(){
 							$('#backdrop, #std-container').detach();
 						});
-					});						
+					});
 					$('#std-container').on('click', function(e){
 						e.stopPropagation();
-					});					
+					});
 				});
-			});					
-		});		
+			});
+		});
 	},
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	initResumeModal : function(){
 		$('#resume-link').on('click', function(e){
+			if ( ($('#isTablet').css('display') == 'inline' || $('#isPhone').css('display') == 'inline' ) ){
+				window.location.href = $('#resume-link').data('href');
+				return true;
+			}
 			$('.effeckt-caption.active').removeClass('active');
 			e.preventDefault();
 			$('<div id="backdrop"></div>').appendTo("BODY");
@@ -296,10 +300,10 @@ var ls_portfolio = {
 			}
 			ls_portfolio.lastPage++;
 		});
-	
+
 		// Preload nav hover images
 		$('<img/>')[0].src = '../img/arrow-left-big-shadow.png';
-		$('<img/>')[0].src = '../img/arrow-right-big-shadow.png';		
+		$('<img/>')[0].src = '../img/arrow-right-big-shadow.png';
 
 		$('.fullscreen-toggle').on('click', function(){
 			ls_portfolio.toggleFullScreen();
@@ -332,20 +336,20 @@ var ls_portfolio = {
 
 
 		$('body').animate({scrollTop: 0}, 10);
-		
+
 		if (ls_portfolio.doEffeckt){
 			EffecktPageTransitions.init();
 		}
-		
+
 		this.getPageFromAnchor();
 		this.refreshEffecktClasses();
-		this.setActivePage(ls_portfolio.currentPage, false);						
+		this.setActivePage(ls_portfolio.currentPage, false);
 		this.initMaverikModal();
 		this.initResumeModal();
 		this.initWeddingModal();
 		this.initUniteGalleries();
-		
-		$('body').removeClass('pre-load').addClass('loaded'); 
+
+		$('body').removeClass('pre-load').addClass('loaded');
 
 		return true;
 	}
