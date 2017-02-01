@@ -19,7 +19,7 @@
 			<section>
 				<h2><i>Project Highlights</i></h2>
 				<ul>					
-					<li>Proofpoint Protection System (PPS) license management for the intricate configurations of Proofpoint's thousands of enterprise customers.</li>
+					<li>Proofpoint Protection Server (PPS) license management for the intricate configurations of Proofpoint's thousands of enterprise customers.</li>
 					<li>Scheduling and release management for new versions of PPS software, for Latest, Long-Term Support and Critical Update customer channels.</li>					
 					<li>Initiate the process for a new protection system deployment in the cloud and view the progress in real-time.</li>
 					<li>Hosted downloads of additional Proofpoint products for licensed customers.</li>
